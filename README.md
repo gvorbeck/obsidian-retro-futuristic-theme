@@ -1,6 +1,16 @@
 # 🚀 Retro-Futuristic Obsidian Theme
 
+![Theme Preview](https://img.shields.io/badge/Theme-Retro--Futuristic-yellow?style=for-the-badge)
+![CSS](https://img.shields.io/badge/CSS-Layers-blue?style=for-the-badge)
+![Obsidian](https://img.shields.io/badge/Obsidian-Compatible-purple?style=for-the-badge)
+
 An 80's cyberpunk-inspired theme for Obsidian, perfect for TTRPG campaigns and sci-fi content.
+
+> ⚡ **Transform your Obsidian vault into a cyberpunk command center!** ⚡
+
+## 📸 Preview
+
+*Coming soon - screenshots of the theme in action*
 
 ## ✨ Features
 
@@ -74,7 +84,28 @@ styles.css          # Main orchestrator file
 4. **Components**: Complex UI elements (callouts)
 5. **Utilities**: Override classes and special effects
 
-## 🚀 Installation
+## 🚀 Quick Start
+
+### Installation
+1. **Download**: Clone or download this repository
+2. **Copy**: Place all `.css` files in your vault's `.obsidian/snippets/` folder
+3. **Enable**: Go to Obsidian Settings → Appearance → CSS snippets
+4. **Activate**: Toggle on the "styles" snippet
+
+### Clone with Git
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/obsidian-retro-futuristic-theme.git
+
+# Copy files to your vault
+cp obsidian-retro-futuristic-theme/*.css /path/to/your/vault/.obsidian/snippets/
+```
+
+## 🔧 Requirements
+
+- **Obsidian** v0.15.0 or later
+- **Internet connection** for VT323 font (auto-loaded)
+- **Modern browser** with CSS layers support
 
 1. Copy all CSS files to your Obsidian vault's `.obsidian/snippets/` folder
 2. Enable CSS snippets in Obsidian Settings → Appearance → CSS snippets
@@ -120,6 +151,32 @@ styles.css          # Main orchestrator file
 - 🎮 Gaming content organization
 - 🌌 Cyberpunk-themed projects
 
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to:
+
+- 🐛 Report bugs
+- 💡 Suggest new features
+- 🔧 Submit pull requests
+- ⭐ Star the repository if you find it useful
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Inspired by 80's cyberpunk aesthetics
+- Built for the amazing Obsidian community
+- Uses Google Fonts VT323 for authentic retro feel
+
+## 📧 Support
+
+- **Issues**: [GitHub Issues](https://github.com/yourusername/obsidian-retro-futuristic-theme/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/obsidian-retro-futuristic-theme/discussions)
+
 ---
 
 *Transform your Obsidian vault into a cyberpunk command center! 🎯*
+
+**Made with 💚 for the Obsidian community**
