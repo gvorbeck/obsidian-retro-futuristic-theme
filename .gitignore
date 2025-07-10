@@ -1,0 +1,29 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Editor backups
+*.bak
+*.backup
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local helper scripts with absolute paths
+git-helper.sh
