@@ -10,11 +10,12 @@ An 80's cyberpunk-inspired theme for Obsidian, perfect for TTRPG campaigns and s
 
 ## 📸 Preview
 
-*Coming soon - screenshots of the theme in action*
+_Coming soon - screenshots of the theme in action_
 
 ## ✨ Features
 
 ### 🎨 Visual Design
+
 - **Retro-futuristic aesthetic** with cyberpunk elements
 - **VT323 monospace font** for authentic computer terminal feel
 - **Yellow primary color** (`#e8d8a3`) with neon accent colors
@@ -22,6 +23,7 @@ An 80's cyberpunk-inspired theme for Obsidian, perfect for TTRPG campaigns and s
 - **Gradient borders and glowing effects**
 
 ### 🔧 Technical Excellence
+
 - **Cross-view compatibility** - Works in both reading and edit modes
 - **CSS Layers architecture** for maintainable and organized code
 - **Performance optimized** animations and effects
@@ -30,30 +32,35 @@ An 80's cyberpunk-inspired theme for Obsidian, perfect for TTRPG campaigns and s
 ### 📦 Component Library
 
 #### Headings (H1-H6)
+
 - **Hierarchical block character prefixes**: `▓▒░`, `▒░`, `░`, `▸`, `◦`, `·`
 - **Gradient underlines** for H1 and H2
 - **Interactive hover effects** with pulsing animations
 - **Cross-view compatibility** for edit mode
 
 #### Callouts
+
 - **Tech panel aesthetics** with gradient borders
 - **Multiple animation layers**: scanlines, data streams, status indicators
 - **Type-specific styling** for warnings and errors
 - **Enhanced hover states** with glow effects
 
 #### Tables
+
 - **Corner bracket indicators** (`┌`, `┘`)
 - **Tech-style headers** with block character prefixes
 - **Hover effects** and gradient backgrounds
 - **Retro-futuristic border styling**
 
 #### Blockquotes
+
 - **Tech accent arrows** (`▸▸`)
 - **Gradient backgrounds** with yellow accent borders
 - **Subtle grid pattern overlays**
 - **Edit mode compatibility**
 
 #### Lists
+
 - **Decimal leading zero** formatting (01, 02, 03...)
 - **Monospace font** for list markers
 - **Consistent spacing** and alignment
@@ -87,12 +94,14 @@ styles.css          # Main orchestrator file
 ## 🚀 Quick Start
 
 ### Installation
+
 1. **Download**: Clone or download this repository
 2. **Copy**: Place all `.css` files in your vault's `.obsidian/snippets/` folder
 3. **Enable**: Go to Obsidian Settings → Appearance → CSS snippets
 4. **Activate**: Toggle on the "styles" snippet
 
 ### Clone with Git
+
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/obsidian-retro-futuristic-theme.git
@@ -177,6 +186,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Transform your Obsidian vault into a cyberpunk command center! 🎯*
+_Transform your Obsidian vault into a cyberpunk command center! 🎯_
 
 **Made with 💚 for the Obsidian community**
