@@ -95,51 +95,6 @@ body {
     text-align: right;
   }
 
-  /* LISTS - EDITING VIEW */
-  /* Style ordered lists in editing view */
-  .markdown-source-view ol {
-    list-style-type: decimal-leading-zero;
-  }
-
-  .markdown-source-view ol li::marker {
-    font-size: 0.75rem;
-    font-family: monospace;
-  }
-
-  /* Reset counter on the first item of each list */
-  .HyperMD-list-line-1:first-child,
-  .HyperMD-list-line-1:not(.HyperMD-list-line-1 + .HyperMD-list-line-1) {
-    counter-reset: list-counter;
-  }
-
-  /* Increment counter on all list items */
-  .HyperMD-list-line-1 {
-    counter-increment: list-counter;
-    text-indent: -30px !important;
-    padding-inline-start: 30px !important;
-  }
-
-  /* Hide the original number */
-  .list-number {
-    visibility: hidden;
-    position: relative;
-    width: 18.39px !important;
-    display: inline-block;
-    bottom: -0.3125rem;
-  }
-
-  /* Show the formatted number with leading zero */
-  .list-number::before {
-    content: counter(list-counter, decimal-leading-zero) ". ";
-    width: 18.39px;
-    visibility: visible;
-    position: absolute;
-    left: -0.5rem;
-    bottom: 0;
-    font-size: 0.75rem;
-    font-family: monospace;
-  }
-
   /* Universal fallback - target all ordered lists with high specificity */
   ol:not(.HyperMD-list-line) {
     list-style: none !important;

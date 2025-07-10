@@ -5,43 +5,25 @@ body {
   --table-background: rgba(var(--purple-rgb), 0.1);
   --table-border-color: var(--yellow);
 
-  .markdown-preview-view td:last-child .table-cell-wrapper,
-  .markdown-preview-view th:last-child .table-cell-wrapper,
-  .markdown-source-view.mod-cm6 td:last-child .table-cell-wrapper,
-  .markdown-source-view.mod-cm6 th:last-child .table-cell-wrapper,
-  .markdown-preview-view th:first-child .table-cell-wrapper,
-  .markdown-source-view.mod-cm6 td:first-child .table-cell-wrapper,
-  .markdown-source-view.mod-cm6 th:first-child .table-cell-wrapper,
-  .markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper,
-  .markdown-preview-view td:last-child,
-  .markdown-preview-view th:last-child,
-  .markdown-source-view.mod-cm6 td:last-child,
-  .markdown-source-view.mod-cm6 th:last-child,
-  .markdown-preview-view td,
-  .markdown-preview-view th,
-  .markdown-source-view.mod-cm6 td,
-  .markdown-source-view.mod-cm6 th,
-  .markdown-preview-view td:first-child,
-  .markdown-preview-view th:first-child,
-  .markdown-source-view.mod-cm6 td:first-child,
-  .markdown-source-view.mod-cm6 th:first-child,
-  .markdown-source-view.mod-cm6 .cm-table-widget th,
-  .markdown-source-view.mod-cm6 .cm-table-widget td {
+  .markdown-rendered td:last-child .table-cell-wrapper,
+  .markdown-rendered th:last-child .table-cell-wrapper,
+  .markdown-rendered th:first-child .table-cell-wrapper,
+  .markdown-rendered td:first-child .table-cell-wrapper,
+  .markdown-rendered td:last-child,
+  .markdown-rendered th:last-child,
+  .markdown-rendered td,
+  .markdown-rendered th,
+  .markdown-rendered td:first-child,
+  .markdown-rendered th:first-child {
     padding: var(--size-4-2);
   }
 
-  .markdown-preview-view td:first-child,
-  .markdown-preview-view th:first-child,
-  .markdown-source-view.mod-cm6 td:first-child,
-  .markdown-source-view.mod-cm6 th:first-child {
+  .markdown-rendered td:first-child,
+  .markdown-rendered th:first-child {
     padding-left: var(--size-4-2);
   }
 
-  table,
-  .markdown-source-view.mod-cm6.is-readable-line-width
-    .cm-contentContainer.cm-contentContainer
-    > .cm-content
-    table {
+  table {
     border-radius: 0 !important;
     border: 1px solid rgba(var(--yellow-rgb), 0.3);
     background: linear-gradient(135deg, 
@@ -56,8 +38,7 @@ body {
   }
 
   /* Tech-style table headers */
-  table th,
-  .markdown-source-view.mod-cm6 .cm-table-widget th {
+  table th {
     background: linear-gradient(90deg, 
       rgba(var(--yellow-rgb), 0.2) 0%,
       rgba(var(--yellow-rgb), 0.1) 50%,
@@ -72,8 +53,7 @@ body {
   }
 
   /* Header accent */
-  table th::before,
-  .markdown-source-view.mod-cm6 .cm-table-widget th::before {
+  table th::before {
     content: "▸";
     color: rgba(var(--yellow-rgb), 0.6);
     margin-right: 0.3rem;
@@ -81,17 +61,14 @@ body {
   }
 
   /* Row hover effects */
-  table tbody tr:hover,
-  .markdown-source-view.mod-cm6 .cm-table-widget tbody tr:hover {
+  table tbody tr:hover {
     background: rgba(var(--yellow-rgb), 0.05) !important;
     transition: background 0.2s ease;
   }
 
   /* Cell borders with tech aesthetic */
   table td,
-  table th,
-  .markdown-source-view.mod-cm6 .cm-table-widget td,
-  .markdown-source-view.mod-cm6 .cm-table-widget th {
+  table th {
     border: 1px solid rgba(var(--yellow-rgb), 0.2) !important;
     border-top: none !important;
     border-bottom: 1px solid rgba(var(--yellow-rgb), 0.15) !important;
@@ -99,16 +76,12 @@ body {
 
   /* First and last column special treatment */
   table td:first-child,
-  table th:first-child,
-  .markdown-source-view.mod-cm6 .cm-table-widget td:first-child,
-  .markdown-source-view.mod-cm6 .cm-table-widget th:first-child {
+  table th:first-child {
     border-left: 2px solid rgba(var(--yellow-rgb), 0.3) !important;
   }
 
   table td:last-child,
-  table th:last-child,
-  .markdown-source-view.mod-cm6 .cm-table-widget td:last-child,
-  .markdown-source-view.mod-cm6 .cm-table-widget th:last-child {
+  table th:last-child {
     border-right: 2px solid rgba(var(--yellow-rgb), 0.3) !important;
   }
 
