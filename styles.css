@@ -10,7 +10,6 @@ layer(base);
 
 /* Import layer-specific stylesheets */
 @import url("typography.css") layer(typography);
-@import url("layout.css") layer(layout);
 @import url("blockquotes.css") layer(layout);
 @import url("lists.css") layer(layout);
 @import url("tables.css") layer(layout);
