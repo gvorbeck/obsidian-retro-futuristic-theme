@@ -1,0 +1,170 @@
+/* Lists Component - List styling and formatting */
+body {
+  /* ========== */
+  /* LISTS - READING VIEW */
+  /* Style ordered lists in reading view - target multiple possible classes */
+  .markdown-preview-view ol,
+  .markdown-rendered ol,
+  ol {
+    list-style: none;
+    counter-reset: list-counter;
+    padding-left: 2rem;
+  }
+
+  .markdown-preview-view ol li,
+  .markdown-rendered ol li,
+  ol li {
+    counter-increment: list-counter;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .markdown-preview-view ol li::before,
+  .markdown-rendered ol li::before,
+  ol li::before {
+    content: counter(list-counter, decimal-leading-zero) ". ";
+    position: absolute;
+    left: -2rem;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: bold;
+    width: 1.5rem;
+    text-align: right;
+  }
+
+  /* Override any default list styling that might interfere */
+  .markdown-preview-view ol,
+  .markdown-rendered ol {
+    list-style-type: none !important;
+  }
+
+  /* More specific targeting for Obsidian's reading view */
+  .view-content ol,
+  .markdown-reading-view ol,
+  div[data-type="markdown"] ol {
+    list-style: none !important;
+    counter-reset: list-counter;
+    padding-left: 2rem;
+  }
+
+  .view-content ol li,
+  .markdown-reading-view ol li,
+  div[data-type="markdown"] ol li {
+    counter-increment: list-counter;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .view-content ol li::before,
+  .markdown-reading-view ol li::before,
+  div[data-type="markdown"] ol li::before {
+    content: counter(list-counter, decimal-leading-zero) ". ";
+    position: absolute;
+    left: -2rem;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: bold;
+    width: 1.5rem;
+    text-align: right;
+  }
+
+  /* High specificity override */
+  .workspace-leaf-content[data-type="markdown"] ol {
+    list-style: none !important;
+    counter-reset: list-counter;
+    padding-left: 2rem;
+  }
+
+  .workspace-leaf-content[data-type="markdown"] ol li {
+    counter-increment: list-counter;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .workspace-leaf-content[data-type="markdown"] ol li::before {
+    content: counter(list-counter, decimal-leading-zero) ". ";
+    position: absolute;
+    left: -2rem;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: bold;
+    width: 1.5rem;
+    text-align: right;
+  }
+
+  /* LISTS - EDITING VIEW */
+  /* Style ordered lists in editing view */
+  .markdown-source-view ol {
+    list-style-type: decimal-leading-zero;
+  }
+
+  .markdown-source-view ol li::marker {
+    font-size: 0.75rem;
+    font-family: monospace;
+  }
+
+  /* Reset counter on the first item of each list */
+  .HyperMD-list-line-1:first-child,
+  .HyperMD-list-line-1:not(.HyperMD-list-line-1 + .HyperMD-list-line-1) {
+    counter-reset: list-counter;
+  }
+
+  /* Increment counter on all list items */
+  .HyperMD-list-line-1 {
+    counter-increment: list-counter;
+    text-indent: -30px !important;
+    padding-inline-start: 30px !important;
+  }
+
+  /* Hide the original number */
+  .list-number {
+    visibility: hidden;
+    position: relative;
+    width: 18.39px !important;
+    display: inline-block;
+    bottom: -0.3125rem;
+  }
+
+  /* Show the formatted number with leading zero */
+  .list-number::before {
+    content: counter(list-counter, decimal-leading-zero) ". ";
+    width: 18.39px;
+    visibility: visible;
+    position: absolute;
+    left: -0.5rem;
+    bottom: 0;
+    font-size: 0.75rem;
+    font-family: monospace;
+  }
+
+  /* Universal fallback - target all ordered lists with high specificity */
+  ol:not(.HyperMD-list-line) {
+    list-style: none !important;
+    counter-reset: list-counter;
+  }
+
+  ol:not(.HyperMD-list-line) li {
+    counter-increment: list-counter;
+    position: relative;
+  }
+
+  ol:not(.HyperMD-list-line) li::before {
+    content: counter(list-counter, decimal-leading-zero) ". ";
+    position: absolute;
+    left: -2rem;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: bold;
+    width: 1.5rem;
+    text-align: right;
+    padding-left: 1rem;
+  }
+
+  ol:not(.HyperMD-list-line) {
+    padding-left: 2rem;
+  }
+}

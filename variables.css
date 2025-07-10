@@ -1,0 +1,64 @@
+:root {
+  /* Blockquotes */
+  --blockquote-border-color: var(--yellow);
+  --blockquote-style: italic;
+  --blockquote-border-thickness: 0.25rem;
+
+  /* Callout Boxes */
+  --callout-border-width: 0.25rem;
+  --callout-title-color: inherit;
+  --callout-title-weight: var(--heading-weight);
+
+  --callout-bug: var(--red-rgb);
+  --callout-default: var(--blue-rgb);
+  --callout-error: var(--red-rgb);
+  --callout-example: var(--purple-rgb);
+  --callout-fail: var(--red-rgb);
+  --callout-important: var(--green-rgb);
+  --callout-info: var(--blue-rgb);
+  --callout-question: var(--orange-rgb);
+  --callout-success: var(--green-rgb);
+  --callout-summary: var(--blue-rgb);
+  --callout-tip: var(--green-rgb);
+  --callout-todo: var(--blue-rgb);
+  --callout-warning: var(--orange-rgb);
+  --callout-quote: var(--gray-rgb);
+
+  /* Lists */
+  --list-numbered-style: decimal-leading-zero;
+
+  /* Colors */
+  --yellow: #e8d8a3;
+  --yellow-rgb: 232, 216, 163;
+
+  --blue: #6b8ca4;
+  --blue-rgb: 107, 140, 164;
+
+  --green: #7a8f71;
+  --green-rgb: 122, 143, 113;
+
+  --orange: #c28c5c;
+  --orange-rgb: 194, 140, 92;
+
+  --red: #b06c5a;
+  --red-rgb: 176, 108, 90;
+
+  --purple: #9c7a99;
+  --purple-rgb: 156, 122, 153;
+
+  --gray: #a8a8a8;
+  --gray-rgb: 168, 168, 168;
+
+  /* Fonts */
+  --font-heading: "VT323", monospace !important;
+
+  --h1-font: var(--font-heading);
+  --h2-font: var(--font-heading);
+  --h3-font: var(--font-heading);
+  --h4-font: var(--font-heading);
+  --h5-font: var(--font-heading);
+  --h6-font: var(--font-heading);
+
+  /* Weights */
+  --heading-weight: 400;
+}

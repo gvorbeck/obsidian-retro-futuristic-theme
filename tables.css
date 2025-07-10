@@ -1,0 +1,137 @@
+/* Tables Component - Table styling and formatting */
+body {
+  /* ========== */
+  /* TABLES */
+  --table-background: rgba(var(--purple-rgb), 0.1);
+  --table-border-color: var(--yellow);
+
+  .markdown-preview-view td:last-child .table-cell-wrapper,
+  .markdown-preview-view th:last-child .table-cell-wrapper,
+  .markdown-source-view.mod-cm6 td:last-child .table-cell-wrapper,
+  .markdown-source-view.mod-cm6 th:last-child .table-cell-wrapper,
+  .markdown-preview-view th:first-child .table-cell-wrapper,
+  .markdown-source-view.mod-cm6 td:first-child .table-cell-wrapper,
+  .markdown-source-view.mod-cm6 th:first-child .table-cell-wrapper,
+  .markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper,
+  .markdown-preview-view td:last-child,
+  .markdown-preview-view th:last-child,
+  .markdown-source-view.mod-cm6 td:last-child,
+  .markdown-source-view.mod-cm6 th:last-child,
+  .markdown-preview-view td,
+  .markdown-preview-view th,
+  .markdown-source-view.mod-cm6 td,
+  .markdown-source-view.mod-cm6 th,
+  .markdown-preview-view td:first-child,
+  .markdown-preview-view th:first-child,
+  .markdown-source-view.mod-cm6 td:first-child,
+  .markdown-source-view.mod-cm6 th:first-child,
+  .markdown-source-view.mod-cm6 .cm-table-widget th,
+  .markdown-source-view.mod-cm6 .cm-table-widget td {
+    padding: var(--size-4-2);
+  }
+
+  .markdown-preview-view td:first-child,
+  .markdown-preview-view th:first-child,
+  .markdown-source-view.mod-cm6 td:first-child,
+  .markdown-source-view.mod-cm6 th:first-child {
+    padding-left: var(--size-4-2);
+  }
+
+  table,
+  .markdown-source-view.mod-cm6.is-readable-line-width
+    .cm-contentContainer.cm-contentContainer
+    > .cm-content
+    table {
+    border-radius: 0 !important;
+    border: 1px solid rgba(var(--yellow-rgb), 0.3);
+    background: linear-gradient(135deg, 
+      rgba(var(--purple-rgb), 0.05) 0%, 
+      transparent 50%, 
+      rgba(var(--yellow-rgb), 0.02) 100%);
+    box-shadow: 
+      0 0 10px rgba(var(--yellow-rgb), 0.1),
+      inset 0 1px 0 rgba(var(--yellow-rgb), 0.1);
+    position: relative;
+    overflow: visible;
+  }
+
+  /* Tech-style table headers */
+  table th,
+  .markdown-source-view.mod-cm6 .cm-table-widget th {
+    background: linear-gradient(90deg, 
+      rgba(var(--yellow-rgb), 0.2) 0%,
+      rgba(var(--yellow-rgb), 0.1) 50%,
+      rgba(var(--yellow-rgb), 0.05) 100%) !important;
+    border-bottom: 2px solid rgba(var(--yellow-rgb), 0.4) !important;
+    font-family: var(--font-heading) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-size: 0.9em !important;
+    color: var(--yellow) !important;
+    position: relative;
+  }
+
+  /* Header accent */
+  table th::before,
+  .markdown-source-view.mod-cm6 .cm-table-widget th::before {
+    content: "▸";
+    color: rgba(var(--yellow-rgb), 0.6);
+    margin-right: 0.3rem;
+    font-size: 0.8em;
+  }
+
+  /* Row hover effects */
+  table tbody tr:hover,
+  .markdown-source-view.mod-cm6 .cm-table-widget tbody tr:hover {
+    background: rgba(var(--yellow-rgb), 0.05) !important;
+    transition: background 0.2s ease;
+  }
+
+  /* Cell borders with tech aesthetic */
+  table td,
+  table th,
+  .markdown-source-view.mod-cm6 .cm-table-widget td,
+  .markdown-source-view.mod-cm6 .cm-table-widget th {
+    border: 1px solid rgba(var(--yellow-rgb), 0.2) !important;
+    border-top: none !important;
+    border-bottom: 1px solid rgba(var(--yellow-rgb), 0.15) !important;
+  }
+
+  /* First and last column special treatment */
+  table td:first-child,
+  table th:first-child,
+  .markdown-source-view.mod-cm6 .cm-table-widget td:first-child,
+  .markdown-source-view.mod-cm6 .cm-table-widget th:first-child {
+    border-left: 2px solid rgba(var(--yellow-rgb), 0.3) !important;
+  }
+
+  table td:last-child,
+  table th:last-child,
+  .markdown-source-view.mod-cm6 .cm-table-widget td:last-child,
+  .markdown-source-view.mod-cm6 .cm-table-widget th:last-child {
+    border-right: 2px solid rgba(var(--yellow-rgb), 0.3) !important;
+  }
+
+  /* Corner indicators */
+  table::before {
+    content: "┌";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    color: rgba(var(--yellow-rgb), 0.4);
+    font-family: var(--font-monospace);
+    font-size: 12px;
+    z-index: 1;
+  }
+
+  table::after {
+    content: "┘";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    color: rgba(var(--yellow-rgb), 0.4);
+    font-family: var(--font-monospace);
+    font-size: 12px;
+    z-index: 1;
+  }
+}

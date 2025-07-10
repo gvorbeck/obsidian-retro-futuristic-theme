@@ -1,0 +1,18 @@
+/* https://docs.obsidian.md/Reference/CSS+variables/CSS+variables */
+
+/* Define layer order - layers defined first have lower priority */
+@layer base, typography, layout, components, utilities;
+
+/* Import fonts and variables into base layer */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap")
+layer(base);
+@import url("variables.css") layer(base);
+
+/* Import layer-specific stylesheets */
+@import url("typography.css") layer(typography);
+@import url("layout.css") layer(layout);
+@import url("blockquotes.css") layer(layout);
+@import url("lists.css") layer(layout);
+@import url("tables.css") layer(layout);
+@import url("callouts.css") layer(components);
+@import url("utilities.css") layer(utilities);

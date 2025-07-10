@@ -1,0 +1,77 @@
+/* Utilities Layer - Override styles and adjustments */
+/* Add any utility classes or important overrides here */
+
+/* Retro-futuristic utility classes */
+.retro-glow {
+  text-shadow: 0 0 8px rgba(var(--yellow-rgb), 0.6) !important;
+  color: var(--yellow) !important;
+}
+
+.tech-border {
+  border: 1px solid rgba(var(--yellow-rgb), 0.4) !important;
+  background: linear-gradient(135deg, 
+    rgba(var(--yellow-rgb), 0.05) 0%, 
+    transparent 50%, 
+    rgba(var(--yellow-rgb), 0.02) 100%) !important;
+}
+
+.cyber-text {
+  font-family: var(--font-heading) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+.block-accent::before {
+  content: "▓▒░" !important;
+  color: rgba(var(--yellow-rgb), 0.5) !important;
+  margin-right: 0.5rem !important;
+}
+
+.scan-effect {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.scan-effect::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(var(--yellow-rgb), 0.2) 50%, 
+    transparent 100%) !important;
+  animation: scan-sweep 3s ease-in-out infinite !important;
+}
+
+@keyframes scan-sweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Standard utility classes */
+.text-center {
+  text-align: center !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* High-priority overrides go here */
+
+/* Fix any layout issues in edit mode */
+.mod-cm6 .cm-editor {
+  font-family: var(--font-text) !important;
+}
+
+.mod-cm6 .cm-editor .cm-line {
+  padding-left: 4px !important;
+}
+
+/* Ensure proper spacing for headers in edit mode */
+.mod-cm6 .HyperMD-header {
+  margin: 1.5rem 0 1rem 0 !important;
+}
