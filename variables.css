@@ -61,4 +61,7 @@
 
   /* Weights */
   --heading-weight: 400;
+
+  /* Spacings */
+  --heading-spacing: 2rem;
 }
