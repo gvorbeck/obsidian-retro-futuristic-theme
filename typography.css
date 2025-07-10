@@ -1,29 +1,17 @@
 /* Typography Layer - Headings, fonts, and text styles */
+
+/* Typography base styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.05rem;
+}
+
+/* CSS Variables */
 body {
-  /* Typography base styles */
-  h1,
-  .markdown-rendered h1,
-  .HyperMD-header-1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    letter-spacing: 0.05rem;
-  }
-
-  .cm-s-obsidian .cm-line.HyperMD-header {
-    padding-top: 0;
-  }
-
-  .markdown-source-view.mod-cm6 .cm-line {
-    padding-left: 1rem;
-  }
-
-  .markdown-source-view.mod-cm6 .cm-content .cm-line.HyperMD-header-1 {
-    margin: 2rem 0 1rem !important;
-  }
-
   /* COLORS */
   /* Heading Colors */
   --h1-color: var(--yellow);
@@ -96,37 +84,12 @@ body {
 /* ========== */
 
 /* Base heading styling with cyberpunk effects */
-
-/* h1, .markdown-rendered h1,
-h2, .markdown-rendered h2,
-h3, .markdown-rendered h3,
-h4, .markdown-rendered h4,
-h5, .markdown-rendered h5,
-h6, .markdown-rendered h6,
-.cm-header-1, .HyperMD-header-1 .cm-header-1,
-.cm-header-2, .HyperMD-header-2 .cm-header-2,
-.cm-header-3, .HyperMD-header-3 .cm-header-3,
-.cm-header-4, .HyperMD-header-4 .cm-header-4,
-.cm-header-5, .HyperMD-header-5 .cm-header-5,
-.cm-header-6, .HyperMD-header-6 .cm-header-6,
-.cm-line .cm-header-1,
-.cm-line .cm-header-2,
-.cm-line .cm-header-3,
-.cm-line .cm-header-4,
-.cm-line .cm-header-5,
-.cm-line .cm-header-6 { */
-h1,
-.HyperMD-header-1,
-h2,
-.HyperMD-header-2,
-h3,
-.HyperMD-header-3,
-h4,
-.HyperMD-header-4,
-h5,
-.HyperMD-header-5,
-h6,
-.HyperMD-header-6 {
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
   position: relative;
   font-family: var(--font-heading);
   color: var(--yellow);
@@ -136,8 +99,7 @@ h6,
 }
 
 /* Subtle accent lines for different heading levels */
-h1::before,
-.HyperMD-header-1::before {
+.markdown-rendered h1::before {
   content: "▓▒░";
   color: rgba(var(--yellow-rgb), 0.6);
   font-size: 0.6em;
@@ -146,8 +108,7 @@ h1::before,
   top: -0.1em;
 }
 
-h2::before,
-.HyperMD-header-2::before {
+.markdown-rendered h2::before {
   content: "▒░";
   color: rgba(var(--yellow-rgb), 0.5);
   font-size: 0.7em;
@@ -156,8 +117,7 @@ h2::before,
   top: -0.1em;
 }
 
-h3::before,
-.HyperMD-header-3::before {
+.markdown-rendered h3::before {
   content: "░";
   color: rgba(var(--yellow-rgb), 0.4);
   font-size: 0.8em;
@@ -166,8 +126,7 @@ h3::before,
   top: -0.1em;
 }
 
-h4::before,
-.HyperMD-header-4::before {
+.markdown-rendered h4::before {
   content: "▸";
   color: rgba(var(--yellow-rgb), 0.5);
   font-size: 0.9em;
@@ -176,8 +135,7 @@ h4::before,
   top: -0.05em;
 }
 
-h5::before,
-.HyperMD-header-5::before {
+.markdown-rendered h5::before {
   content: "◦";
   color: rgba(var(--yellow-rgb), 0.4);
   font-size: 1em;
@@ -186,8 +144,7 @@ h5::before,
   top: -0.05em;
 }
 
-h6::before,
-.HyperMD-header-6::before {
+.markdown-rendered h6::before {
   content: "·";
   color: rgba(var(--yellow-rgb), 0.3);
   font-size: 1.2em;
@@ -197,8 +154,7 @@ h6::before,
 }
 
 /* Left border accents */
-h1,
-.HyperMD-header-1 {
+h1 {
   /* .markdown-rendered h1,
 .cm-header-1,
 .HyperMD-header-1 .cm-header-1,
@@ -208,8 +164,7 @@ h1,
   position: relative;
 }
 
-h2,
-.HyperMD-header-2 {
+h2 {
   /* .markdown-rendered h2,
 .cm-header-2,
 .HyperMD-header-2 .cm-header-2,
@@ -219,8 +174,7 @@ h2,
   position: relative;
 }
 
-h3,
-.HyperMD-header-3 {
+h3 {
   /* .markdown-rendered h3,
 .cm-header-3,
 .HyperMD-header-3 .cm-header-3,
@@ -229,8 +183,7 @@ h3,
   padding-left: 0.5rem;
 }
 
-h4,
-.HyperMD-header-4 {
+h4 {
   /* .markdown-rendered h4,
 .cm-header-4,
 .HyperMD-header-4 .cm-header-4,
@@ -239,8 +192,7 @@ h4,
   padding-left: 0.4rem;
 }
 
-h5,
-.HyperMD-header-5 {
+h5 {
   /* .markdown-rendered h5,
 .cm-header-5,
 .HyperMD-header-5 .cm-header-5,
@@ -249,8 +201,7 @@ h5,
   padding-left: 0.3rem;
 }
 
-h6,
-.HyperMD-header-6 {
+h6 {
   /* .markdown-rendered h6,
 .cm-header-6,
 .HyperMD-header-6 .cm-header-6,

@@ -71,15 +71,15 @@
 /* High-priority overrides go here */
 
 /* Fix any layout issues in edit mode */
-.mod-cm6 .cm-editor {
+/* .mod-cm6 .cm-editor {
   font-family: var(--font-text) !important;
-}
+} */
 
 /* .mod-cm6 .cm-editor .cm-line {
   padding-left: 4px !important;
 } */
 
 /* Ensure proper spacing for headers in edit mode */
-.mod-cm6 .HyperMD-header {
+/* .mod-cm6 .HyperMD-header {
   margin: 1.5rem 0 1rem 0 !important;
-}
+} */

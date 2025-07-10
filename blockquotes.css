@@ -2,8 +2,7 @@
 
 /* Retro-futuristic blockquotes */
 blockquote,
-.markdown-rendered blockquote,
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote {
+.markdown-rendered blockquote {
   position: relative;
   border-left: 3px solid rgba(var(--yellow-rgb), 0.6);
   background: linear-gradient(
@@ -53,7 +52,7 @@ blockquote::after,
 }
 
 /* Edit mode specific styling */
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote {
+/* .mod-cm6 .cm-editor .cm-line.HyperMD-quote {
   border-left: 3px solid rgba(var(--yellow-rgb), 0.6);
   background: linear-gradient(
     90deg,
@@ -67,10 +66,10 @@ blockquote::after,
   color: rgba(var(--text-normal), 0.9);
   position: relative;
   overflow: visible;
-}
+} */
 
 /* Tech accent for edit mode blockquotes */
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote::before {
+/* .mod-cm6 .cm-editor .cm-line.HyperMD-quote::before {
   content: "▸▸";
   position: absolute;
   left: -8px;
@@ -84,7 +83,7 @@ blockquote::after,
 }
 
 /* Subtle grid pattern for edit mode */
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote::after {
+/* .mod-cm6 .cm-editor .cm-line.HyperMD-quote::after {
   content: "";
   position: absolute;
   top: 0;
@@ -100,22 +99,26 @@ blockquote::after,
   pointer-events: none;
   opacity: 0.4;
   z-index: 0;
-}
+} */
 
 /* Quote content styling in edit mode */
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote .cm-quote {
+/* .mod-cm6 .cm-editor .cm-line.HyperMD-quote .cm-quote {
   color: rgba(var(--text-normal), 0.9) !important;
   font-style: italic;
-}
+} */
 
 /* Quote symbol (>) styling in edit mode */
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote .cm-formatting-quote {
+/* .mod-cm6 .cm-editor .cm-line.HyperMD-quote .cm-formatting-quote {
   color: rgba(var(--yellow-rgb), 0.8) !important;
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 /* Hide the actual > character but keep spacing */
-.mod-cm6 .cm-editor .cm-line.HyperMD-quote .cm-formatting-quote .cm-transparent {
+/* .mod-cm6
+  .cm-editor
+  .cm-line.HyperMD-quote
+  .cm-formatting-quote
+  .cm-transparent {
   opacity: 0.3;
-}
+} */
