@@ -1,125 +1,369 @@
-/* Lists Component - List styling and formatting */
-body {
-  /* ========== */
-  /* LISTS - READING VIEW */
-  /* Style ordered lists in reading view - target multiple possible classes */
-  .markdown-preview-view ol,
-  .markdown-rendered ol,
-  ol {
-    list-style: none;
-    counter-reset: list-counter;
-    padding-left: 2rem;
+/* Lists Component - Retro-futuristic list styling */
+
+/* ========== */
+/* ORDERED LISTS - DECIMAL LEADING ZERO */
+/* ========== */
+
+.markdown-rendered ol {
+  list-style: none;
+  counter-reset: cyber-counter;
+  padding-left: 0;
+  position: relative;
+  margin: 1.5rem 0;
+  max-width: 100%;
+}
+
+.markdown-rendered ol li {
+  counter-increment: cyber-counter;
+  position: relative;
+  padding-left: 2.8rem;
+  margin: 0.8rem 0;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Retro-futuristic number styling */
+.markdown-rendered ol li::before {
+  content: counter(cyber-counter, decimal-leading-zero) "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-monospace);
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--yellow);
+  text-shadow: 0 0 4px rgba(var(--yellow-rgb), 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--yellow-rgb), 0.1) 0%,
+    rgba(var(--yellow-rgb), 0.05) 50%,
+    transparent 100%
+  );
+  padding: 0.2rem 0.4rem 0.2rem 0.3rem;
+  border-left: 2px solid rgba(var(--yellow-rgb), 0.6);
+  border-radius: 0 3px 3px 0;
+  max-width: 2.2rem;
+  width: auto;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: subtle-pulse 3s ease-in-out infinite alternate;
+}
+
+/* Hover effects for list items */
+.markdown-rendered ol li:hover::before {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--yellow-rgb), 0.2) 0%,
+    rgba(var(--yellow-rgb), 0.1) 50%,
+    rgba(var(--yellow-rgb), 0.02) 100%
+  );
+  border-left-color: var(--yellow);
+  text-shadow: 0 0 6px rgba(var(--yellow-rgb), 0.8);
+}
+
+/* Subtle scan line effect */
+.markdown-rendered ol li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--yellow-rgb), 0.2) 50%,
+    transparent 100%
+  );
+  animation: scan-line 4s linear infinite;
+  opacity: 0.3;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ========== */
+/* UNORDERED LISTS - BLOCK CHARACTERS */
+/* ========== */
+
+.markdown-rendered ul {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.markdown-rendered ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin: 0.6rem 0;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Level 1 - Primary block character */
+.markdown-rendered ul li::before {
+  content: "▓";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font-family: var(--font-monospace);
+  font-size: 1rem;
+  color: var(--yellow);
+  text-shadow: 0 0 4px rgba(var(--yellow-rgb), 0.5);
+  animation: block-flicker 2.5s ease-in-out infinite;
+}
+
+/* Level 2 - Medium block character */
+.markdown-rendered ul ul li::before {
+  content: "▒";
+  color: rgba(var(--yellow-rgb), 0.8);
+  left: 0.1rem;
+  font-size: 0.9rem;
+}
+
+/* Level 3 - Light block character */
+.markdown-rendered ul ul ul li::before {
+  content: "░";
+  color: rgba(var(--yellow-rgb), 0.6);
+  left: 0.2rem;
+  font-size: 0.8rem;
+}
+
+/* Level 4+ - Arrow character */
+.markdown-rendered ul ul ul ul li::before {
+  content: "▸";
+  color: rgba(var(--yellow-rgb), 0.5);
+  left: 0.3rem;
+  font-size: 0.7rem;
+}
+
+/* Nested list spacing adjustments */
+.markdown-rendered ul ul {
+  margin: 0.3rem 0;
+  padding-left: 1.2rem;
+}
+
+.markdown-rendered ul ul ul {
+  padding-left: 1rem;
+}
+
+.markdown-rendered ul ul ul ul {
+  padding-left: 0.8rem;
+}
+
+/* ========== */
+/* HOVER EFFECTS & INTERACTIONS */
+/* ========== */
+
+/* Subtle glow on list item hover */
+.markdown-rendered li:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--yellow-rgb), 0.02) 0%,
+    transparent 30%
+  );
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+/* Tech grid pattern overlay for lists */
+.markdown-rendered ol::before,
+.markdown-rendered ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    circle at 90% 10%,
+    rgba(var(--yellow-rgb), 0.01) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* ========== */
+/* ANIMATIONS */
+/* ========== */
+
+@keyframes subtle-pulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(var(--yellow-rgb), 0.7);
+  }
+}
+
+@keyframes block-flicker {
+  0%,
+  95% {
+    opacity: 1;
+  }
+  96%,
+  98% {
+    opacity: 0.3;
+  }
+  99%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ========== */
+/* SPECIAL EFFECTS */
+/* ========== */
+
+/* Corner brackets for the entire list container */
+.markdown-rendered ol::after,
+.markdown-rendered ul::after {
+  content: "└";
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  color: rgba(var(--yellow-rgb), 0.3);
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Alternative data stream effect for ordered lists */
+.markdown-rendered ol li:nth-child(even)::before {
+  animation-delay: 0.5s;
+}
+
+.markdown-rendered ol li:nth-child(3n)::before {
+  animation-delay: 1s;
+}
+
+/* Block character fade pattern for unordered lists */
+.markdown-rendered ul li:nth-child(even)::before {
+  animation-delay: 0.8s;
+}
+
+.markdown-rendered ul li:nth-child(3n)::before {
+  animation-delay: 1.6s;
+}
+
+/* ========== */
+/* RESPONSIVE ADJUSTMENTS */
+/* ========== */
+
+/* Smaller screens - reduce spacing */
+@media (max-width: 768px) {
+  .markdown-rendered ol li {
+    padding-left: 2.2rem;
   }
 
-  .markdown-preview-view ol li,
-  .markdown-rendered ol li,
-  ol li {
-    counter-increment: list-counter;
-    position: relative;
-    margin-bottom: 0.5rem;
+  .markdown-rendered ul li {
+    padding-left: 1.5rem;
   }
 
-  .markdown-preview-view ol li::before,
-  .markdown-rendered ol li::before,
-  ol li::before {
-    content: counter(list-counter, decimal-leading-zero) ". ";
-    position: absolute;
-    left: -2rem;
-    font-family: monospace;
+  .markdown-rendered ol li::before {
+    max-width: 1.8rem;
     font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: bold;
-    width: 1.5rem;
-    text-align: right;
+    padding: 0.1rem 0.3rem 0.1rem 0.2rem;
   }
 
-  /* Override any default list styling that might interfere */
-  .markdown-preview-view ol,
-  .markdown-rendered ol {
-    list-style-type: none !important;
+  .markdown-rendered ul li::before {
+    font-size: 0.85rem;
   }
 
-  /* More specific targeting for Obsidian's reading view */
-  .view-content ol,
-  .markdown-reading-view ol,
-  div[data-type="markdown"] ol {
-    list-style: none !important;
-    counter-reset: list-counter;
-    padding-left: 2rem;
-  }
-
-  .view-content ol li,
-  .markdown-reading-view ol li,
-  div[data-type="markdown"] ol li {
-    counter-increment: list-counter;
-    position: relative;
-    margin-bottom: 0.5rem;
-  }
-
-  .view-content ol li::before,
-  .markdown-reading-view ol li::before,
-  div[data-type="markdown"] ol li::before {
-    content: counter(list-counter, decimal-leading-zero) ". ";
-    position: absolute;
-    left: -2rem;
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: bold;
-    width: 1.5rem;
-    text-align: right;
-  }
-
-  /* High specificity override */
-  .workspace-leaf-content[data-type="markdown"] ol {
-    list-style: none !important;
-    counter-reset: list-counter;
-    padding-left: 2rem;
-  }
-
-  .workspace-leaf-content[data-type="markdown"] ol li {
-    counter-increment: list-counter;
-    position: relative;
-    margin-bottom: 0.5rem;
-  }
-
-  .workspace-leaf-content[data-type="markdown"] ol li::before {
-    content: counter(list-counter, decimal-leading-zero) ". ";
-    position: absolute;
-    left: -2rem;
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: bold;
-    width: 1.5rem;
-    text-align: right;
-  }
-
-  /* Universal fallback - target all ordered lists with high specificity */
-  ol:not(.HyperMD-list-line) {
-    list-style: none !important;
-    counter-reset: list-counter;
-  }
-
-  ol:not(.HyperMD-list-line) li {
-    counter-increment: list-counter;
-    position: relative;
-  }
-
-  ol:not(.HyperMD-list-line) li::before {
-    content: counter(list-counter, decimal-leading-zero) ". ";
-    position: absolute;
-    left: -2rem;
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: bold;
-    width: 1.5rem;
-    text-align: right;
+  /* Reduce nested list spacing on mobile */
+  .markdown-rendered ul ul {
     padding-left: 1rem;
   }
 
-  ol:not(.HyperMD-list-line) {
+  .markdown-rendered ul ul ul {
+    padding-left: 0.8rem;
+  }
+
+  .markdown-rendered ul ul ul ul {
+    padding-left: 0.6rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .markdown-rendered ol li {
     padding-left: 2rem;
   }
+
+  .markdown-rendered ul li {
+    padding-left: 1.3rem;
+  }
+
+  .markdown-rendered ol li::before {
+    max-width: 1.6rem;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.2rem;
+  }
+}
+
+/* ========== */
+/* CHECKLIST SUPPORT */
+/* ========== */
+
+/* Style for task lists (checkboxes) */
+.markdown-rendered ul.contains-task-list li {
+  padding-left: 2rem;
+}
+
+.markdown-rendered ul.contains-task-list li::before {
+  display: none; /* Hide block character for task lists */
+}
+
+/* Custom checkbox styling */
+.markdown-rendered ul.contains-task-list li input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(var(--yellow-rgb), 0.5);
+  background: transparent;
+  border-radius: 2px;
+  margin-right: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.markdown-rendered ul.contains-task-list li input[type="checkbox"]:checked {
+  border-color: var(--yellow);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--yellow-rgb), 0.2) 0%,
+    rgba(var(--yellow-rgb), 0.1) 100%
+  );
+  box-shadow: 0 0 4px rgba(var(--yellow-rgb), 0.3);
+}
+
+.markdown-rendered
+  ul.contains-task-list
+  li
+  input[type="checkbox"]:checked::after {
+  content: "▓";
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  font-size: 10px;
+  color: var(--yellow);
+  text-shadow: 0 0 2px rgba(var(--yellow-rgb), 0.8);
 }
