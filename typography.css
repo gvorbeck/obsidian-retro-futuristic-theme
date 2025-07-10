@@ -88,28 +88,36 @@ body {
 /* ========== */
 
 /* Base heading styling with cyberpunk effects */
-h1,
-.markdown-rendered h1,
-h2,
-.markdown-rendered h2,
-h3,
-.markdown-rendered h3,
-h4,
-.markdown-rendered h4,
-h5,
-.markdown-rendered h5,
-h6,
-.markdown-rendered h6 {
+h1, .markdown-rendered h1,
+h2, .markdown-rendered h2,
+h3, .markdown-rendered h3,
+h4, .markdown-rendered h4,
+h5, .markdown-rendered h5,
+h6, .markdown-rendered h6,
+.cm-header-1, .HyperMD-header-1 .cm-header-1,
+.cm-header-2, .HyperMD-header-2 .cm-header-2,
+.cm-header-3, .HyperMD-header-3 .cm-header-3,
+.cm-header-4, .HyperMD-header-4 .cm-header-4,
+.cm-header-5, .HyperMD-header-5 .cm-header-5,
+.cm-header-6, .HyperMD-header-6 .cm-header-6,
+.cm-line .cm-header-1,
+.cm-line .cm-header-2,
+.cm-line .cm-header-3,
+.cm-line .cm-header-4,
+.cm-line .cm-header-5,
+.cm-line .cm-header-6 {
   position: relative;
   font-family: var(--font-heading);
   color: var(--yellow);
   text-shadow: 0 0 4px rgba(var(--yellow-rgb), 0.5);
   margin: 1.5rem 0 1rem 0;
+  overflow: visible;
 }
 
 /* Subtle accent lines for different heading levels */
-h1::before,
-.markdown-rendered h1::before {
+h1::before, .markdown-rendered h1::before,
+.cm-header-1::before, .HyperMD-header-1 .cm-header-1::before,
+.cm-line .cm-header-1::before {
   content: "▓▒░";
   color: rgba(var(--yellow-rgb), 0.6);
   font-size: 0.6em;
@@ -118,8 +126,9 @@ h1::before,
   top: -0.1em;
 }
 
-h2::before,
-.markdown-rendered h2::before {
+h2::before, .markdown-rendered h2::before,
+.cm-header-2::before, .HyperMD-header-2 .cm-header-2::before,
+.cm-line .cm-header-2::before {
   content: "▒░";
   color: rgba(var(--yellow-rgb), 0.5);
   font-size: 0.7em;
@@ -128,8 +137,9 @@ h2::before,
   top: -0.1em;
 }
 
-h3::before,
-.markdown-rendered h3::before {
+h3::before, .markdown-rendered h3::before,
+.cm-header-3::before, .HyperMD-header-3 .cm-header-3::before,
+.cm-line .cm-header-3::before {
   content: "░";
   color: rgba(var(--yellow-rgb), 0.4);
   font-size: 0.8em;
@@ -138,25 +148,82 @@ h3::before,
   top: -0.1em;
 }
 
+h4::before, .markdown-rendered h4::before,
+.cm-header-4::before, .HyperMD-header-4 .cm-header-4::before,
+.cm-line .cm-header-4::before {
+  content: "▸";
+  color: rgba(var(--yellow-rgb), 0.5);
+  font-size: 0.9em;
+  margin-right: 0.3rem;
+  position: relative;
+  top: -0.05em;
+}
+
+h5::before, .markdown-rendered h5::before,
+.cm-header-5::before, .HyperMD-header-5 .cm-header-5::before,
+.cm-line .cm-header-5::before {
+  content: "◦";
+  color: rgba(var(--yellow-rgb), 0.4);
+  font-size: 1em;
+  margin-right: 0.3rem;
+  position: relative;
+  top: -0.05em;
+}
+
+h6::before, .markdown-rendered h6::before,
+.cm-header-6::before, .HyperMD-header-6 .cm-header-6::before,
+.cm-line .cm-header-6::before {
+  content: "·";
+  color: rgba(var(--yellow-rgb), 0.3);
+  font-size: 1.2em;
+  margin-right: 0.3rem;
+  position: relative;
+  top: -0.05em;
+}
+
 /* Left border accents */
-h1,
-.markdown-rendered h1 {
+h1, .markdown-rendered h1,
+.cm-header-1, .HyperMD-header-1 .cm-header-1,
+.cm-line .cm-header-1 {
   border-left: 3px solid rgba(var(--yellow-rgb), 0.6);
   padding-left: 1rem;
   position: relative;
 }
 
-h2,
-.markdown-rendered h2 {
+h2, .markdown-rendered h2,
+.cm-header-2, .HyperMD-header-2 .cm-header-2,
+.cm-line .cm-header-2 {
   border-left: 2px solid rgba(var(--yellow-rgb), 0.4);
   padding-left: 0.8rem;
   position: relative;
 }
 
-h3,
-.markdown-rendered h3 {
+h3, .markdown-rendered h3,
+.cm-header-3, .HyperMD-header-3 .cm-header-3,
+.cm-line .cm-header-3 {
   border-left: 1px solid rgba(var(--yellow-rgb), 0.3);
   padding-left: 0.5rem;
+}
+
+h4, .markdown-rendered h4,
+.cm-header-4, .HyperMD-header-4 .cm-header-4,
+.cm-line .cm-header-4 {
+  border-left: 1px solid rgba(var(--yellow-rgb), 0.25);
+  padding-left: 0.4rem;
+}
+
+h5, .markdown-rendered h5,
+.cm-header-5, .HyperMD-header-5 .cm-header-5,
+.cm-line .cm-header-5 {
+  border-left: 1px solid rgba(var(--yellow-rgb), 0.2);
+  padding-left: 0.3rem;
+}
+
+h6, .markdown-rendered h6,
+.cm-header-6, .HyperMD-header-6 .cm-header-6,
+.cm-line .cm-header-6 {
+  border-left: 1px solid rgba(var(--yellow-rgb), 0.15);
+  padding-left: 0.2rem;
 }
 
 /* Underline effect for h1 only */
