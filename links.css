@@ -1,0 +1,318 @@
+/* filepath: /Users/garrett.vorbeck/Library/CloudStorage/GoogleDrive-gvorbeck@gmail.com/My Drive/Documents/Obsidian/TTRPG/.obsidian/snippets/links.css */
+/* 
+ * 80's Retro-Futuristic Link Styles
+ * Clean cyberpunk aesthetic with minimal animation
+ */
+
+/* ========================================
+   ROBUST RESET - Override Obsidian defaults
+   ======================================== */
+
+/* Reset all link selectors that Obsidian might use */
+.markdown-rendered a,
+.markdown-rendered a:link,
+.markdown-rendered a:visited,
+.markdown-rendered a:hover,
+.markdown-rendered a:active,
+.markdown-rendered a:focus,
+.markdown-rendered a.internal-link,
+.markdown-rendered a.external-link,
+.markdown-rendered a[href*="://"],
+.markdown-rendered a.tag,
+.markdown-rendered a.is-unresolved,
+.markdown-rendered .internal-link,
+.markdown-rendered .external-link,
+.cm-link,
+.cm-hmd-internal-link,
+.cm-url,
+.markdown-preview-view a,
+.markdown-source-view a {
+  /* Core visual resets */
+  color: unset;
+  text-decoration: unset;
+  text-decoration-line: unset;
+  text-decoration-style: unset;
+  text-decoration-color: unset;
+  text-underline-offset: unset;
+  background: unset;
+  background-color: unset;
+  background-image: unset;
+  border: unset;
+  border-radius: unset;
+  box-shadow: unset;
+  outline: unset;
+  padding: unset;
+  margin: unset;
+  text-shadow: unset;
+  opacity: unset;
+  transform: unset;
+  transition: unset;
+  animation: unset;
+  filter: unset;
+  mix-blend-mode: unset;
+  /* Keep standard font */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+}
+
+/* Reset pseudo-elements */
+.markdown-rendered a::before,
+.markdown-rendered a::after {
+  content: unset;
+  display: unset;
+  position: unset;
+  background: unset;
+  border: unset;
+  box-shadow: unset;
+  text-shadow: unset;
+  opacity: unset;
+  animation: unset;
+  transition: unset;
+  transform: unset;
+  z-index: unset;
+}
+
+/* ========================================
+   RETRO-FUTURISTIC BASE STYLES
+   ======================================== */
+
+/* Base link appearance */
+.markdown-rendered a {
+  color: var(--red) !important;
+  text-decoration: none !important;
+  position: relative !important;
+  padding: 2px 6px !important;
+  margin: 0 1px !important;
+  border-radius: 2px !important;
+  transition: all 0.25s ease !important;
+
+  /* Subtle cyberpunk background */
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.08) 0%,
+    rgba(var(--red-rgb), 0.12) 50%,
+    rgba(var(--red-rgb), 0.08) 100%
+  ) !important;
+
+  /* Subtle border with glow effect */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(var(--red-rgb), 0.3), 0 0 3px rgba(var(--red-rgb), 0.2) !important;
+
+  /* Prevent text selection issues */
+  display: inline !important;
+  vertical-align: baseline !important;
+}
+
+/* Hover state with enhanced cyberpunk glow */
+.markdown-rendered a:hover {
+  color: var(--red) !important;
+
+  /* Enhanced background gradient */
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.15) 0%,
+    rgba(var(--red-rgb), 0.25) 50%,
+    rgba(var(--red-rgb), 0.15) 100%
+  ) !important;
+
+  /* Enhanced glow effect */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 0 1px rgba(var(--red-rgb), 0.6), 0 0 8px rgba(var(--red-rgb), 0.4),
+    0 0 16px rgba(var(--red-rgb), 0.2) !important;
+
+  /* Subtle text glow */
+  text-shadow: 0 0 4px rgba(var(--red-rgb), 0.6),
+    0 0 8px rgba(var(--red-rgb), 0.3) !important;
+
+  /* Minimal lift effect */
+  transform: translateY(-1px) !important;
+}
+
+/* Active/Focus states */
+.markdown-rendered a:active,
+.markdown-rendered a:focus {
+  outline: none !important;
+
+  /* Intense glow for active state */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 2px rgba(var(--red-rgb), 0.8), 0 0 12px rgba(var(--red-rgb), 0.6),
+    0 0 24px rgba(var(--red-rgb), 0.3) !important;
+
+  /* Enhanced text glow */
+  text-shadow: 0 0 6px rgba(var(--red-rgb), 0.8),
+    0 0 12px rgba(var(--red-rgb), 0.4) !important;
+}
+
+/* ========================================
+   SPECIALIZED LINK TYPES
+   ======================================== */
+
+/* External links with subtle indicator */
+.markdown-rendered a[href*="://"]
+{
+  padding-right: 18px !important;
+}
+
+.markdown-rendered a[href*="://"]::after
+{
+  content: "↗" !important;
+  position: absolute !important;
+  right: 4px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 0.8em !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.markdown-rendered a[href*="://"]:hover::after
+{
+  opacity: 1 !important;
+}
+
+/* Internal links with bracket styling */
+.markdown-rendered a.internal-link {
+  border-left: 2px solid rgba(var(--red-rgb), 0.4) !important;
+  border-right: 2px solid rgba(var(--red-rgb), 0.4) !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+
+  /* Slightly different background for internal links */
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.06) 0%,
+    rgba(var(--red-rgb), 0.1) 100%
+  ) !important;
+}
+
+.markdown-rendered a.internal-link:hover {
+  border-left-color: rgba(var(--red-rgb), 0.8) !important;
+  border-right-color: rgba(var(--red-rgb), 0.8) !important;
+}
+
+/* Tag links with chip-like appearance */
+.markdown-rendered a.tag {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.12) 0%,
+    rgba(var(--red-rgb), 0.18) 50%,
+    rgba(var(--red-rgb), 0.12) 100%
+  ) !important;
+  border: 1px solid rgba(var(--red-rgb), 0.5) !important;
+  border-radius: 12px !important;
+  padding: 2px 8px !important;
+  font-size: 0.9em !important;
+  margin: 0 2px !important;
+}
+
+.markdown-rendered a.tag::before {
+  content: "#" !important;
+  opacity: 0.8 !important;
+  margin-right: 2px !important;
+}
+
+.markdown-rendered a.tag:hover {
+  border-color: rgba(var(--red-rgb), 0.8) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.18) 0%,
+    rgba(var(--red-rgb), 0.28) 50%,
+    rgba(var(--red-rgb), 0.18) 100%
+  ) !important;
+}
+
+/* Visited links with dimmed appearance */
+.markdown-rendered a:visited {
+  color: rgba(var(--red-rgb), 0.8) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.05) 0%,
+    rgba(var(--red-rgb), 0.08) 50%,
+    rgba(var(--red-rgb), 0.05) 100%
+  ) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(var(--red-rgb), 0.2), 0 0 2px rgba(var(--red-rgb), 0.1) !important;
+}
+
+/* Unresolved links with warning styling */
+.markdown-rendered a.is-unresolved {
+  color: rgba(var(--red-rgb), 0.6) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.04) 0%,
+    rgba(var(--red-rgb), 0.06) 100%
+  ) !important;
+  border: 1px dashed rgba(var(--red-rgb), 0.4) !important;
+  opacity: 0.8 !important;
+}
+
+.markdown-rendered a.is-unresolved::before {
+  content: "?" !important;
+  position: absolute !important;
+  left: -12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 0.8em !important;
+  opacity: 0.6 !important;
+  color: rgba(var(--red-rgb), 0.8) !important;
+}
+
+.markdown-rendered a.is-unresolved:hover {
+  opacity: 1 !important;
+  border-color: rgba(var(--red-rgb), 0.6) !important;
+}
+
+/* ========================================
+   CONTEXTUAL STYLING
+   ======================================== */
+
+/* Links in blockquotes */
+.markdown-rendered blockquote a {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.1) 0%,
+    rgba(var(--red-rgb), 0.15) 100%
+  ) !important;
+  border-left: 2px solid rgba(var(--red-rgb), 0.5) !important;
+  padding-left: 6px !important;
+}
+
+/* Links in tables */
+.markdown-rendered table a {
+  padding: 1px 4px !important;
+  margin: 0 !important;
+  font-size: 0.95em !important;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.06) 0%,
+    rgba(var(--red-rgb), 0.1) 100%
+  ) !important;
+}
+
+/* Links in lists */
+.markdown-rendered li a {
+  padding: 1px 4px !important;
+  margin: 0 1px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.05) 0%,
+    rgba(var(--red-rgb), 0.08) 100%
+  ) !important;
+}
+
+/* Links in callouts */
+.markdown-rendered .callout a {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--red-rgb), 0.08) 0%,
+    rgba(var(--red-rgb), 0.12) 100%
+  ) !important;
+}
+
+.markdown-rendered .callout a:hover {
+  text-shadow: 0 0 5px rgba(var(--red-rgb), 0.7),
+    0 0 10px rgba(var(--red-rgb), 0.4) !important;
+}

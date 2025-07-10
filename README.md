@@ -65,16 +65,24 @@ _Coming soon - screenshots of the theme in action_
 - **Monospace font** for list markers
 - **Consistent spacing** and alignment
 
+#### Links
+
+- **Dithering fade effects** on hover with pixelated patterns
+- **Scanline animations** for focus states
+- **Type-specific indicators**: `▸` for external, `◦` for internal
+- **Special styling** for wiki-links, tags, and broken links
+- **Contextual appearance** within different components
+
 ## 📁 File Structure
 
 ```
 styles.css          # Main orchestrator file
 ├── variables.css   # Base layer: colors, fonts, variables
 ├── typography.css  # Typography layer: headings and text
-├── layout.css      # Layout layer: base compatibility
 ├── blockquotes.css # Layout layer: quote styling
 ├── lists.css       # Layout layer: list formatting
 ├── tables.css      # Layout layer: table styling
+├── links.css       # Components layer: link styling with dithering
 ├── callouts.css    # Components layer: callout panels
 └── utilities.css   # Utilities layer: helper classes
 ```
@@ -88,7 +96,7 @@ styles.css          # Main orchestrator file
 1. **Base**: Variables, fonts, and foundational styles
 2. **Typography**: Heading styles and text formatting
 3. **Layout**: Structural elements (lists, tables, quotes)
-4. **Components**: Complex UI elements (callouts)
+4. **Components**: Complex UI elements (callouts, links)
 5. **Utilities**: Override classes and special effects
 
 ## 🚀 Quick Start

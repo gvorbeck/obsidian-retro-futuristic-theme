@@ -13,5 +13,6 @@ layer(base);
 @import url("blockquotes.css") layer(layout);
 @import url("lists.css") layer(layout);
 @import url("tables.css") layer(layout);
+@import url("links.css") layer(components);
 @import url("callouts.css") layer(components);
 @import url("utilities.css") layer(utilities);
