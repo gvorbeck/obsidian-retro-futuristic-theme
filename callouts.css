@@ -1,13 +1,7 @@
 /* Components Layer - Callouts and other UI components */
 
-/* Target callouts in both reading view and edit view */
-.callout,
-.cm-embed-block .callout,
-.cm-embed-block .markdown-rendered .callout,
-.cm-callout .callout,
-.markdown-rendered .callout,
-.workspace-leaf-content .callout,
-.mod-cm6 .callout {
+/* Target callouts in reading view only */
+.markdown-rendered .callout {
   position: relative;
   border: none !important;
   border-radius: 0;
@@ -18,13 +12,7 @@
 }
 
 /* Main callout container with gradient border effect */
-.callout::before,
-.cm-embed-block .callout::before,
-.cm-embed-block .markdown-rendered .callout::before,
-.cm-callout .callout::before,
-.markdown-rendered .callout::before,
-.workspace-leaf-content .callout::before,
-.mod-cm6 .callout::before {
+.markdown-rendered .callout::before {
   content: "▓▓▒▒░░";
   position: absolute;
   top: -2px;
@@ -47,13 +35,7 @@
 }
 
 /* Inner content background */
-.callout::after,
-.cm-embed-block .callout::after,
-.cm-embed-block .markdown-rendered .callout::after,
-.cm-callout .callout::after,
-.markdown-rendered .callout::after,
-.workspace-leaf-content .callout::after,
-.mod-cm6 .callout::after {
+.markdown-rendered .callout::after {
   content: "";
   position: absolute;
   top: 0;
@@ -66,13 +48,7 @@
 }
 
 /* Title styling with block character fade */
-.callout-title,
-.cm-embed-block .callout-title,
-.cm-embed-block .markdown-rendered .callout-title,
-.cm-callout .callout-title,
-.markdown-rendered .callout-title,
-.workspace-leaf-content .callout-title,
-.mod-cm6 .callout-title {
+.markdown-rendered .callout-title {
   background: linear-gradient(
     90deg,
     rgba(var(--callout-color), 0.3) 0%,
@@ -90,13 +66,7 @@
 }
 
 /* Title fade effect with block characters */
-.callout-title::before,
-.cm-embed-block .callout-title::before,
-.cm-embed-block .markdown-rendered .callout-title::before,
-.cm-callout .callout-title::before,
-.markdown-rendered .callout-title::before,
-.workspace-leaf-content .callout-title::before,
-.mod-cm6 .callout-title::before {
+.markdown-rendered .callout-title::before {
   content: "▓▒░";
   position: absolute;
   top: 50%;
@@ -120,25 +90,13 @@
 }
 
 /* Icon styling */
-.callout-icon,
-.cm-embed-block .callout-icon,
-.cm-embed-block .markdown-rendered .callout-icon,
-.cm-callout .callout-icon,
-.markdown-rendered .callout-icon,
-.workspace-leaf-content .callout-icon,
-.mod-cm6 .callout-icon {
+.markdown-rendered .callout-icon {
   color: rgba(var(--callout-color), 1);
   filter: drop-shadow(0 0 4px rgba(var(--callout-color), 0.5));
 }
 
 /* Content area with subtle block pattern */
-.callout-content,
-.cm-embed-block .callout-content,
-.cm-embed-block .markdown-rendered .callout-content,
-.cm-callout .callout-content,
-.markdown-rendered .callout-content,
-.workspace-leaf-content .callout-content,
-.mod-cm6 .callout-content {
+.markdown-rendered .callout-content {
   padding: 1rem;
   background: linear-gradient(
     180deg,
@@ -149,13 +107,7 @@
 }
 
 /* Block character pattern in content area */
-.callout-content::after,
-.cm-embed-block .callout-content::after,
-.cm-embed-block .markdown-rendered .callout-content::after,
-.cm-callout .callout-content::after,
-.markdown-rendered .callout-content::after,
-.workspace-leaf-content .callout-content::after,
-.mod-cm6 .callout-content::after {
+.markdown-rendered .callout-content::after {
   content: "░";
   position: absolute;
   bottom: 0.5rem;
@@ -167,13 +119,7 @@
 }
 
 /* Scan line effect */
-.callout-title::after,
-.cm-embed-block .callout-title::after,
-.cm-embed-block .markdown-rendered .callout-title::after,
-.cm-callout .callout-title::after,
-.markdown-rendered .callout-title::after,
-.workspace-leaf-content .callout-title::after,
-.mod-cm6 .callout-title::after {
+.markdown-rendered .callout-title::after {
   content: "";
   position: absolute;
   top: 0;
@@ -207,13 +153,7 @@
 }
 
 /* Glow effect on hover */
-.callout:hover::before,
-.cm-embed-block .callout:hover::before,
-.cm-embed-block .markdown-rendered .callout:hover::before,
-.cm-callout .callout:hover::before,
-.markdown-rendered .callout:hover::before,
-.workspace-leaf-content .callout:hover::before,
-.mod-cm6 .callout:hover::before {
+.markdown-rendered .callout:hover::before {
   background: linear-gradient(
     135deg,
     rgba(var(--callout-color), 1) 0%,
@@ -227,56 +167,26 @@
 }
 
 /* Corner brackets for that tech feel */
-.callout-title-inner::before,
-.callout-title-inner::after,
-.cm-embed-block .callout-title-inner::before,
-.cm-embed-block .callout-title-inner::after,
-.cm-embed-block .markdown-rendered .callout-title-inner::before,
-.cm-embed-block .markdown-rendered .callout-title-inner::after,
-.cm-callout .callout-title-inner::before,
-.cm-callout .callout-title-inner::after,
 .markdown-rendered .callout-title-inner::before,
-.markdown-rendered .callout-title-inner::after,
-.workspace-leaf-content .callout-title-inner::before,
-.workspace-leaf-content .callout-title-inner::after,
-.mod-cm6 .callout-title-inner::before,
-.mod-cm6 .callout-title-inner::after {
+.markdown-rendered .callout-title-inner::after {
   content: "▓";
   position: absolute;
   color: rgba(var(--callout-color), 0.6);
   font-size: 0.6rem;
 }
 
-.callout-title-inner::before,
-.cm-embed-block .callout-title-inner::before,
-.cm-embed-block .markdown-rendered .callout-title-inner::before,
-.cm-callout .callout-title-inner::before,
-.markdown-rendered .callout-title-inner::before,
-.workspace-leaf-content .callout-title-inner::before,
-.mod-cm6 .callout-title-inner::before {
+.markdown-rendered .callout-title-inner::before {
   top: 2px;
   left: 4px;
 }
 
-.callout-title-inner::after,
-.cm-embed-block .callout-title-inner::after,
-.cm-embed-block .markdown-rendered .callout-title-inner::after,
-.cm-callout .callout-title-inner::after,
-.markdown-rendered .callout-title-inner::after,
-.workspace-leaf-content .callout-title-inner::after,
-.mod-cm6 .callout-title-inner::after {
+.markdown-rendered .callout-title-inner::after {
   top: 2px;
   right: 4px;
 }
 
 /* Alternative grid pattern overlay with block chars */
-.callout-content::before,
-.cm-embed-block .callout-content::before,
-.cm-embed-block .markdown-rendered .callout-content::before,
-.cm-callout .callout-content::before,
-.markdown-rendered .callout-content::before,
-.workspace-leaf-content .callout-content::before,
-.mod-cm6 .callout-content::before {
+.markdown-rendered .callout-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -294,20 +204,8 @@
 }
 
 /* Stronger fade for specific callout types */
-.callout[data-callout="warning"]::before,
-.callout[data-callout="error"]::before,
-.cm-embed-block .callout[data-callout="warning"]::before,
-.cm-embed-block .callout[data-callout="error"]::before,
-.cm-embed-block .markdown-rendered .callout[data-callout="warning"]::before,
-.cm-embed-block .markdown-rendered .callout[data-callout="error"]::before,
-.cm-callout .callout[data-callout="warning"]::before,
-.cm-callout .callout[data-callout="error"]::before,
 .markdown-rendered .callout[data-callout="warning"]::before,
-.markdown-rendered .callout[data-callout="error"]::before,
-.workspace-leaf-content .callout[data-callout="warning"]::before,
-.workspace-leaf-content .callout[data-callout="error"]::before,
-.mod-cm6 .callout[data-callout="warning"]::before,
-.mod-cm6 .callout[data-callout="error"]::before {
+.markdown-rendered .callout[data-callout="error"]::before {
   background: linear-gradient(
     135deg,
     rgba(var(--callout-color), 1) 0%,
@@ -320,20 +218,8 @@
 }
 
 /* Warning/Error gets more aggressive block chars */
-.callout[data-callout="warning"] .callout-title::before,
-.callout[data-callout="error"] .callout-title::before,
-.cm-embed-block .callout[data-callout="warning"] .callout-title::before,
-.cm-embed-block .callout[data-callout="error"] .callout-title::before,
-.cm-embed-block .markdown-rendered .callout[data-callout="warning"] .callout-title::before,
-.cm-embed-block .markdown-rendered .callout[data-callout="error"] .callout-title::before,
-.cm-callout .callout[data-callout="warning"] .callout-title::before,
-.cm-callout .callout[data-callout="error"] .callout-title::before,
 .markdown-rendered .callout[data-callout="warning"] .callout-title::before,
-.markdown-rendered .callout[data-callout="error"] .callout-title::before,
-.workspace-leaf-content .callout[data-callout="warning"] .callout-title::before,
-.workspace-leaf-content .callout[data-callout="error"] .callout-title::before,
-.mod-cm6 .callout[data-callout="warning"] .callout-title::before,
-.mod-cm6 .callout[data-callout="error"] .callout-title::before {
+.markdown-rendered .callout[data-callout="error"] .callout-title::before {
   content: "▓▓▒▒░░";
   letter-spacing: 0.1em;
   animation: aggressive-block-fade 1.5s ease-in-out infinite;
@@ -350,13 +236,7 @@
 }
 
 /* Subtle animation for the whole callout */
-.callout,
-.cm-embed-block .callout,
-.cm-embed-block .markdown-rendered .callout,
-.cm-callout .callout,
-.markdown-rendered .callout,
-.workspace-leaf-content .callout,
-.mod-cm6 .callout {
+.markdown-rendered .callout {
   animation: subtle-glow 4s ease-in-out infinite alternate;
 }
 
